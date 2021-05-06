@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'django_q',
     'rest_framework',
+    'django_extensions',
 
     'books',
     'news',
@@ -138,4 +139,16 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
+}
+
+# django-q
+Q_CLUSTER = {
+    'name': 'DjangORM',
+    'workers': 1,
+    'timeout': 600,
+    'orm': 'default',
+    'save_limit': 0,
+    'ack_failures': True,
+    'max_attempts': 1,
+    'attempt_count': 1
 }
