@@ -1,3 +1,24 @@
+# OSX file
+.DS_Store
+
+# Static files
+assets/*
+!assets/.gitkeep
+media/*
+!media/.gitkeep
+
+# Env files
+.env.*
+!.env.example
+
+# Log files
+logs/*
+!logs/.gitkeep
+
+# Editor config
+.idea/
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
