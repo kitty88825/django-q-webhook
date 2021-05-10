@@ -31,6 +31,10 @@ def task_post_webhook(article):
 def retry_fail_task():
     """Submit fail tasks back to the queue."""
     queryset = Failure.objects.all()
+
+    if not queryset:
+        return
+
     for task in queryset:
         opts = {
             'task_name': f'{task.name}',
